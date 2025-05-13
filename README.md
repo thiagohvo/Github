@@ -1,26 +1,72 @@
-# Comandos Github
+# 🚀 GitHub Commands 
 
-## git status - Visualiza as alterações feitas
-## git add - Adicionar a Stage
-## git commit -m - indica as alterações que você fez no seu projeto
-## git push - Sobe o diretório para o GitHub
-## git pull - atualiza o repositório local, significa dois comandos (git fetch e git merge)
-## git log - Acessa o histórico da sua branch atual (main):
-## git tag -a v1.0 -m "Versão 1.0" - Cria uma tag do seu projet
-## git checkout -b feature/inclusão-do-título - Inclua um título no index.html (ou outra modificação), crie uma branch com o nome feature/inclusão-do-título:
-## git add index.html  / git commit -m "Adiciona título ao index.html" - Edite index.html
-## git checkout nome-da-branch - Como acessar uma branch
-## git checkout nome-da-branch - Como trocar de branch
-## Local: git branch -d nome-da-branch / Remoto: git push origin --delete nome-da-branch - Como deletar uma branch
-## git checkout main / git merge nome-da-branch - Entre na main branch e faça um merge da branch desejada para integrar ao main:
-## O rebase cria um histórico mais linear e limpo, enquanto o merge pode criar um histórico com mais ramificações e commits de merge. - Para resolver o conflito do código, por que é preferível utilizar o rebase em vez do merge
-## git cherry-pick hash-do-commit - Como inserir apenas um commit de uma branch para a main
-## git reset --hard hash-do-commit - Resete seu código até algum momento utilizando como parâmetro o hash do commit:
-## echo "Conteúdo do arquivo" > arquivo.txt / git add arquivo.txt / git stash push -m "Arquivo txt em stash" - Crie um arquivo tipo txt e guarde em sua stash:
-## No GitHub: Vá para o repositório, clique em "Pull requests", depois "New pull request" e siga as instruções. - Como fazer um Pull-Request
-##  No GitHub: Ao criar ou editar um Pull Request, você pode adicionar revisores na seção "Reviewers" no lado direito. - Como adicionar Reviewers em seu repositório:
+### 🔍 `git status`  
+Check the current state of your working directory (what’s modified, staged, etc.).
 
+### ➕ `git add`  
+Add changes to the staging area.
 
+### 💬 `git commit -m "Your message"`  
+Record your changes with a message explaining what you did.
 
+### ⬆️ `git push`  
+Send your local commits to GitHub.
 
-![]()
+### ⬇️ `git pull`  
+Update your local repository (equivalent to `git fetch` + `git merge`).
+
+### 📜 `git log`  
+View the commit history of your current branch.
+
+### 🏷️ `git tag -a v1.0 -m "Version 1.0"`  
+Create a version tag for your project.
+
+### 🌿 `git checkout -b feature/add-title`  
+Create and switch to a new branch (e.g., to add a title in `index.html`).
+
+### 📝 `git add index.html` + `git commit -m "Add title to index.html"`  
+Stage and commit changes made to `index.html`.
+
+### 🔁 `git checkout branch-name`  
+Switch to an existing branch.
+
+### 🧹 Delete a branch  
+- Local: `git branch -d branch-name`  
+- Remote: `git push origin --delete branch-name`
+
+### 🔀 Merge a branch into `main`
+bash
+git checkout main  
+git merge branch-name
+
+🧠 Why use git rebase instead of git merge?  
+Rebase creates a cleaner and more linear history by placing your changes on top of the main branch.  
+This avoids extra merge commits and keeps the log simpler.  
+Use it when collaborating to maintain a tidy commit history.
+
+🍒 git cherry-pick commit-hash  
+Use this command to apply a specific commit from one branch into your current branch.  
+Great for grabbing only the needed change without merging the full branch.
+
+⏪ git reset --hard commit-hash  
+Resets your project to a previous commit using its hash.  
+⚠️ WARNING: This erases all changes made after that commit. Use with caution!
+
+🧾 Save a temporary file in stash  
+  echo "File content" > file.txt  
+  git add file.txt  
+  git stash push -m "Stash file.txt"
+
+🔃 How to create a Pull Request (PR) on GitHub  
+1. Go to your GitHub repository  
+2. Click on "Pull Requests"  
+3. Click on "New Pull Request"  
+4. Select base and compare branches  
+5. Review the changes and confirm
+
+👥 How to add Reviewers to your PR  
+1. While creating or editing a Pull Request  
+2. Look to the right-hand sidebar  
+3. Find the "Reviewers" section  
+4. Click and select users to request their review
+```
