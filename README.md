@@ -34,7 +34,7 @@ Switch to an existing branch.
 - Local: `git branch -d branch-name`  
 - Remote: `git push origin --delete branch-name`
 
-### 🔀 `Merge a branch into `main``
+### 🔀 `Merge a branch into `main`
 bash
 git checkout main  
 git merge branch-name
