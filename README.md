@@ -39,32 +39,32 @@ bash
 git checkout main  
 git merge branch-name
 
-###🧠 Why use git rebase instead of git merge?  
+### 🧠 Why use git rebase instead of git merge?  
 Rebase creates a cleaner and more linear history by placing your changes on top of the main branch.  
 This avoids extra merge commits and keeps the log simpler.  
 Use it when collaborating to maintain a tidy commit history.
 
-###🍒 git cherry-pick commit-hash  
+### 🍒 git cherry-pick commit-hash  
 Use this command to apply a specific commit from one branch into your current branch.  
 Great for grabbing only the needed change without merging the full branch.
 
-###⏪ git reset --hard commit-hash  
+### ⏪ git reset --hard commit-hash  
 Resets your project to a previous commit using its hash.  
 ⚠️ WARNING: This erases all changes made after that commit. Use with caution!
 
-###🧾 Save a temporary file in stash  
+### 🧾 Save a temporary file in stash  
   echo "File content" > file.txt  
   git add file.txt  
   git stash push -m "Stash file.txt"
 
-###🔃 How to create a Pull Request (PR) on GitHub  
+### 🔃 How to create a Pull Request (PR) on GitHub  
 1. Go to your GitHub repository  
 2. Click on "Pull Requests"  
 3. Click on "New Pull Request"  
 4. Select base and compare branches  
 5. Review the changes and confirm
 
-###👥 How to add Reviewers to your PR  
+### 👥 How to add Reviewers to your PR  
 1. While creating or editing a Pull Request  
 2. Look to the right-hand sidebar  
 3. Find the "Reviewers" section  
